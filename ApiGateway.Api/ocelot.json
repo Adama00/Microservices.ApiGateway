@@ -2,11 +2,10 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/auth/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth-service.example.com", // Django REST API service host
-          "Port": 80
+          "Host": "user-management-microservice-nnvi.onrender.com"
         }
       ],
       "UpstreamPathTemplate": "/auth/{everything}",
@@ -14,11 +13,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/users/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "users-service.example.com", // .NET 6 User Management service host
-          "Port": 80
+          "Host": "user-management-microservice-nnvi.onrender.com"
         }
       ],
       "UpstreamPathTemplate": "/users/{everything}",
@@ -26,11 +24,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/orders/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orders-service.example.com", // .NET 6 Order Management service host
-          "Port": 80
+          "Host": "adama00.bsite.net"
         }
       ],
       "UpstreamPathTemplate": "/orders/{everything}",
@@ -41,8 +38,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost", // .NET 6 Delivery Service Management service host
-          "Port": 7037
+          "Host": "adama.bsite.net"
         }
       ],
       "UpstreamPathTemplate": "/DeliveriesService/{everything}",
@@ -50,11 +46,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/shops/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "shops-service.example.com", // Next.js Shop Management service host
-          "Port": 80
+          "Host": "wsamainproject.vercel.app/"
         }
       ],
       "UpstreamPathTemplate": "/shops/{everything}",
@@ -62,6 +57,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000" // Replace with your API Gateway URL
+    "BaseUrl": "https://adama00.bsite.net" // Replace with your API Gateway URL
   }
 }
